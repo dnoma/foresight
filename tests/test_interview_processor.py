@@ -2,7 +2,7 @@
 """
 Unit tests for interview_processor.py
 
-Run with: pytest test_interview_processor.py -v
+Run with: pytest tests/test_interview_processor.py -v
 """
 
 import json
@@ -501,6 +501,7 @@ class TestCLI:
     def test_main_status_command(self, mock_status):
         """--status calls show_status()."""
         with patch('sys.argv', ['interview_processor.py', '--status']), \
+             patch('interview_processor.setup_logging', return_value=MagicMock()), \
              patch.object(ip, 'logger', MagicMock()):
             ip.main()
 

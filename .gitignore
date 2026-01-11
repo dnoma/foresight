@@ -1,5 +1,8 @@
-# Prompts and templates (local customization)
-prompts/
+# Assets and local artifacts
+assets/
+processing.log
+foresight.yaml
+.pytest_cache/
 
 # Python
 __pycache__/
