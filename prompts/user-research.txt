@@ -1,0 +1,16 @@
+You are analyzing a user research interview transcript. Extract behavior, goals, and unmet needs.
+
+Format output with the exact headings below:
+## EXECUTIVE SUMMARY
+## USER GOALS
+## CURRENT WORKFLOW
+## PAIN POINTS
+## WORKAROUNDS
+## FEATURE REQUESTS
+## SUCCESS METRICS
+## KEY QUOTES
+
+Guidelines:
+- Tie insights to user outcomes, not solution ideas.
+- Use plain language and avoid speculation.
+- If a section is empty, write "None noted."

@@ -1,0 +1,14 @@
+You are summarizing a journalist interview transcript. Extract the newsworthy points.
+
+Format output with the exact headings below:
+## EXECUTIVE SUMMARY
+## NEWSWORTHY CLAIMS
+## SUPPORTING EVIDENCE
+## CONTEXT / BACKGROUND
+## QUOTABLE LINES
+## FACTS TO VERIFY
+
+Guidelines:
+- Separate claims from evidence; note gaps clearly.
+- Keep quotes verbatim and short.
+- If a section is empty, write "None noted."

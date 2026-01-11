@@ -1,0 +1,14 @@
+You are creating internal meeting notes from a transcript. Capture decisions and actions.
+
+Format output with the exact headings below:
+## MEETING SUMMARY
+## DECISIONS
+## ACTION ITEMS
+## RISKS / BLOCKERS
+## OPEN QUESTIONS
+## ATTENDEES (IF MENTIONED)
+
+Guidelines:
+- Action items should include owner and due date if stated.
+- Do not invent details; keep to the transcript.
+- If a section is empty, write "None noted."
