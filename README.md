@@ -1,6 +1,8 @@
 # Foresight
 
 [![PyPI version](https://img.shields.io/pypi/v/foresight-transcribe)](https://pypi.org/project/foresight-transcribe/)
+[![PyPI downloads](https://img.shields.io/pypi/dm/foresight-transcribe)](https://pypi.org/project/foresight-transcribe/)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/github/license/dnoma/foresight)](https://github.com/dnoma/foresight/blob/main/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/dnoma/foresight?style=social)](https://github.com/dnoma/foresight)
 
