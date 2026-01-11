@@ -1,5 +1,9 @@
 # Foresight
 
+[![PyPI version](https://img.shields.io/pypi/v/foresight-transcribe)](https://pypi.org/project/foresight-transcribe/)
+[![License](https://img.shields.io/github/license/dnoma/foresight)](https://github.com/dnoma/foresight/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/dnoma/foresight?style=social)](https://github.com/dnoma/foresight)
+
 **Turn recorded conversations into structured insights. Automatically.**
 
 Drop an audio file in a folder. Get back a searchable transcript and an AI-extracted summary with key themes, quotes, and follow-up questions.
@@ -50,44 +54,58 @@ Original archived automatically
 
 ---
 
-## Quick Start
+## Install
 
 ```bash
-# 1. Install dependencies
-brew install ollama ffmpeg
-pip install openai-whisper watchdog
+pip install foresight-transcribe
+```
 
-# 2. Start Ollama and pull model (~4GB download)
+That's it. Or install from source:
+
+```bash
+git clone https://github.com/dnoma/foresight.git
+cd foresight
+pip install -e .
+```
+
+### Setup Ollama (required for insights)
+
+```bash
+# Install Ollama
+brew install ollama   # macOS
+# or: curl -fsSL https://ollama.ai/install.sh | sh  # Linux
+
+# Start and pull model (~4GB)
 ollama serve &
 ollama pull mistral
+```
 
-# 3. Test installation
-python interview_processor.py --test
+### Verify installation
 
-# 4. Process your first file
-python interview_processor.py --file ~/path/to/recording.m4a
+```bash
+foresight --test
 ```
 
 ---
 
-## Three Ways to Use It
+## Usage
 
 ### Watch Mode (recommended)
 Leave it running. Drop files in the folder, they process automatically.
 ```bash
-python interview_processor.py --watch
+foresight --watch
 ```
 
 ### Single File
 Process one recording right now.
 ```bash
-python interview_processor.py --file meeting.m4a
+foresight --file meeting.m4a
 ```
 
 ### Batch Mode
 Have a backlog? Process everything at once.
 ```bash
-python interview_processor.py --batch
+foresight --batch
 ```
 
 ---
@@ -148,7 +166,7 @@ Auto-created on first run:
 
 ## Configuration
 
-Edit the top of `interview_processor.py`:
+Edit the config in `interview_processor.py` (or after install: `~/.local/lib/python*/site-packages/interview_processor.py`):
 
 ```python
 WHISPER_MODEL = "medium"    # tiny|base|small|medium|large
@@ -234,12 +252,12 @@ ollama ps           # Check if model is loaded
 
 **Transcription too slow?**
 ```bash
-python interview_processor.py --file audio.m4a --model small
+foresight --file audio.m4a --model small
 ```
 
 **Check system status:**
 ```bash
-python interview_processor.py --status
+foresight --status
 ```
 
 ---
